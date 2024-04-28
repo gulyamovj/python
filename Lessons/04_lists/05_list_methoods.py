@@ -42,3 +42,12 @@
 # marks = ["BMW", "Toyota", "Mercedes", "Lada", "Nissan", "Audi"]
 # marks.remove(val)
 # print(marks)
+
+# Task
+index = int(input())
+new_country = input()
+
+countries = ["Россия", "Украина", "Беларусь"]
+countries.insert(index, new_country)
+
+print(countries)
