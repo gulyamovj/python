@@ -58,7 +58,7 @@ population = [
     146_780_720,
     146_748_590  # 2020
 ]
-start = int(input()) - 1999
-end = int(input()) - 1999
+start = int(input()) - 2003
+end = int(input()) - 2002
 
 print(population[start:end])
