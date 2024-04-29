@@ -51,6 +51,3 @@ countries = ["Россия", "Украина", "Беларусь"]
 countries.insert(index, new_country)
 
 print(countries)
-
-# There is new comment
-# There is another one new comment
