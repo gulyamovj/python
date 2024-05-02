@@ -50,12 +50,12 @@
 # school_marks = [3, 4, 4, 5, 3, 3, 5, 5, 5, 4, 3, 2, 4, 5, 2, 4, 5]
 # print(school_marks.count(numb))
 
-# Task - Процент от числа оценок
-# numb = int(input())
-numb = 2
-school_marks = [3, 4, 4, 5, 3, 3, 5, 5, 5, 4, 3, 2, 4, 5, 2, 4, 5]
-col = school_marks.count(numb)
-marks = len(school_marks)
-result = col/marks * 100
 
-print("{:2%}".format(result))
+# Task - Процент от числа оценок
+# n = int(input())
+n = 2
+school_marks = [3, 4, 4, 5, 3, 3, 5, 5, 5, 4, 3, 2, 4, 5, 2, 4, 5]
+point = school_marks.count(n)
+pro = len(school_marks)
+
+print("{}".format((point / pro) * 100))
