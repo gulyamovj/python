@@ -59,17 +59,29 @@
 #
 # print("{} {} {}".format(name, family_name, surname))
 
-# Task
-import sys
+# # Task
+# import sys
+#
+# value = sys.stdin.read().splitlines()
+#
+# products = [
+#     ["молоко", "кефир"],  # молочка
+#     ["котлеты", "курица", "говядина"]  # мясо
+# ]
+#
+# products.append(value)
+# print(products)
 
-value = sys.stdin.read().splitlines()
-
-products = [
-    ["молоко", "кефир"],  # молочка
-    ["котлеты", "курица", "говядина"]  # мясо
-]
-
-products.append(value)
-print(products)
-
-
+# # Task
+# import sys
+#
+# indx, *goods = sys.stdin.read().splitlines()
+#
+# products = [
+#     ["молоко", "кефир"],  # молочка
+#     ["котлеты", "курица", "говядина"]  # мясо
+# ]
+#
+# products[int(indx)].extend(goods)
+#
+# print(products)
