@@ -42,3 +42,34 @@
 # result = "{0:,}".format(sum(budget[year-start_year] * 1000)).replace(",", " ")
 # print(result)
 
+# # Task
+# fio = [
+#     ["Иванов", "Юдашкин", "Петров", "Королева", "Коваленко"],  # Фамилии
+#     ["Юрий", "Андрей", "Никита", "Вероника", "Игнат", "Пётр", "Валерий"],  # Имена
+#     ["Александрович", "Анатольевна", "Викторовна", "Иванович"]   # Отчества
+# ]
+#
+# name = int(input())
+# family_name = int(input())
+# surname = int(input())
+#
+# name = fio[0][name]
+# family_name = fio[1][family_name]
+# surname = fio[2][surname]
+#
+# print("{} {} {}".format(name, family_name, surname))
+
+# Task
+import sys
+
+value = sys.stdin.read().splitlines()
+
+products = [
+    ["молоко", "кефир"],  # молочка
+    ["котлеты", "курица", "говядина"]  # мясо
+]
+
+products.append(value)
+print(products)
+
+
