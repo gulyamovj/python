@@ -57,7 +57,7 @@
 # print(words[-1])
 #################################
 
-# # Task 02
+# # Task 03
 # # Новые товары
 # # Ниже в редакторе кода содержится список товаров — products.
 # # Напишите программу, которая принимает из stdin один параметр —
@@ -76,4 +76,13 @@
 # products.sort()
 # print(products)
 
-# Task 03
+# # Task 04
+# string = input()
+# new_string = string.split()
+# print(new_string[2], new_string[3])
+
+# Task 05
+string = "22.15.18.24 [10/Feb/2016:00:20:13] GET /cars/toyota HTTP/2 200"
+new_string = string.split()
+new_string = new_string.split("/")
+print(new_string)
