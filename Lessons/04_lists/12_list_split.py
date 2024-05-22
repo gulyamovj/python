@@ -84,5 +84,5 @@
 # Task 05
 string = "22.15.18.24 [10/Feb/2016:00:20:13] GET /cars/toyota HTTP/2 200"
 new_string = string.split()
-new_string = new_string.split("/")
-print(new_string)
+new_string = new_string[4].split("/")
+print(new_string[1])
