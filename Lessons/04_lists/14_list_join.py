@@ -33,4 +33,6 @@
 # Task
 ing = "булочки,пирожки,печенье"
 ing = ing.split(",")
+ing[0].title()
+
 print(ing)
