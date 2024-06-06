@@ -31,8 +31,10 @@
 # print(url.lower())
 
 # Task
-ing = "булочки,пирожки,печенье"
+ing = "булочки,  пирожки,печенье"
 ing = ing.split(",")
-ing[0].title()
-
-print(ing)
+ing = ", ".join(ing)
+ing = ing.capitalize()
+index = ing.index(",", ing.index(",")) + 1
+new_ing = ing[:index] + ing[index:].replace(",", " и") + "."
+print(new_ing)
