@@ -22,9 +22,8 @@
 # products.sort(key=str.upper)
 # print(products)
 
-# Task
-
-import sys
-numbs = sys.stdin.read().splitlines()
-numbs.sort(key=str.int)
-print(numbs)
+# # Task
+# import sys
+# numbs = sys.stdin.read().splitlines()
+# numbs.sort(key=str.int)
+# print(numbs)
