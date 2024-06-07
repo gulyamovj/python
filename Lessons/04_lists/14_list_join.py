@@ -30,11 +30,38 @@
 # url = url.strip("?")
 # print(url.lower())
 
+# # Task
+# ing = "булочки,  пирожки,печенье"
+# ing = ing.split(",")
+# ing = ", ".join(ing)
+# ing = ing.capitalize()
+# index = ing.index(",", ing.index(",")) + 1
+# new_ing = ing[:index] + ing[index:].replace(",", " и") + "."
+# print(new_ing)
+
 # Task
-ing = "булочки,  пирожки,печенье"
-ing = ing.split(",")
-ing = ", ".join(ing)
-ing = ing.capitalize()
-index = ing.index(",", ing.index(",")) + 1
-new_ing = ing[:index] + ing[index:].replace(",", " и") + "."
-print(new_ing)
+fn = 'products-1.txt'
+
+# Открываем файл
+products_file = open(fn)
+
+# Читаем файл
+products = products_file.read().splitlines()
+
+# Сортируем файл
+sorted_product = sorted(products)
+
+# Преобразовываем в текст и сохраняем в оперативке
+sorted_product = "\n".join(sorted_product)
+
+# Закрываем файл в режиме чтения
+products_file.close()
+
+# Открываем файл в режиме записи (Все удалится)
+products_file = open(fn, "w")
+
+# Записываем соритрованный список продуктов
+products_file.write(sorted_product)
+
+# Закрываем файл
+products_file.close()
