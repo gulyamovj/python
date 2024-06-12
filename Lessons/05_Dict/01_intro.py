@@ -111,26 +111,40 @@
 #
 # print(f"{result:.0f}%")
 
+# # Task
+# start = int(input()) - 1
+# end = int(input()) - 1
+# fin = [
+#     {"income": 987, "expenses": 345},
+#     {"income": 1987, "expenses": 1247},
+#     {"income": 3011, "expenses": 2098},
+#     {"income": 3400, "expenses": 2798},
+#     {"income": 1987, "expenses": 1783},
+#     {"income": 2684, "expenses": 2004},
+#     {"income": 2008, "expenses": 1555},
+#     {"income": 2498, "expenses": 2210},
+#     {"income": 1714, "expenses": 1789},
+#     {"income": 6971, "expenses": 6971},
+#     {"income": 345, "expenses": 147},
+#     {"income": 2487, "expenses": 2101}
+# ]
+#
+# first = fin[start]["income"] - fin[start]["expenses"]
+# second = fin[end]["income"] - fin[end]["expenses"]
+#
+# print(second - first)
+
+
 # Task
-start = int(input())
-end = int(input())
-fin = [
-    {"income": 987, "expenses": 345},
-    {"income": 1987, "expenses": 1247},
-    {"income": 3011, "expenses": 2098},
-    {"income": 3400, "expenses": 2798},
-    {"income": 1987, "expenses": 1783},
-    {"income": 2684, "expenses": 2004},
-    {"income": 2008, "expenses": 1555},
-    {"income": 2498, "expenses": 2210},
-    {"income": 1714, "expenses": 1789},
-    {"income": 6971, "expenses": 6971},
-    {"income": 345, "expenses": 147},
-    {"income": 2487, "expenses": 2101}
-]
+id = int(input())
+imdb = {
+    111161: [{"rating": 8}, {"rating": 9}, {"rating": 10}, {"rating": 9}, {"rating": 10}],
+    68646:  [{"rating": 8}, {"rating": 10}, {"rating": 9}, {"rating": 9}, {"rating": 9}],
+    468569: [{"rating": 10}, {"rating": 10}, {"rating": 8}, {"rating": 8}],
+    71562:  [{"rating": 9}, {"rating": 9}, {"rating": 10}],
+    167260: [{"rating": 8}, {"rating": 7}, {"rating": 9}, {"rating": 9}, {"rating": 8}, {"rating": 9}]
+}
 
-first = fin[start]["income"] - fin[start]["expenses"]
-second = fin[end]["income"] - fin[end]["expenses"]
+rating = imdb[id][-1]['rating']
 
-print(first)
-print(second)
+print(rating)
