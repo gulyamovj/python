@@ -7,21 +7,51 @@
 #     "role": "manager"
 # }
 #
-# print(list(user))
+# print(list(user.keys()))
 # print(list(user.values()))
 # print(list(user.items()))
 
-# Task
-colors = {
-   "black": "черный",
-   "white": "белый",
-   "blue": "синий"
-}
+# # Task
+# colors = {
+#    "black": "черный",
+#    "white": "белый",
+#    "blue": "синий"
+# }
+#
+# en = input()
+# ru = input()
+#
+# colors.update({en:ru})
+# k = list(colors.keys())
+#
+# print(", ".join(k))
 
-en = input()
-ru = input()
+# # Task
+# colors = {
+#    "black": "черный",
+#    "white": "белый",
+#    "blue": "синий"
+# }
+#
+# en = input()
+# ru = input()
+#
+# colors.update({en:ru})
+# k = list(colors.values())
+#
+# print(", ".join(k))
 
-colors.update({en:ru})
-k = list(colors.keys())
-
-print(f"{k[0]}, {k[1]}, {k[2]}, {k[3]}" )
+# # Task
+# colors = {
+#    "black": "черный",
+#    "white": "белый",
+#    "blue": "синий"
+# }
+#
+# en = input()
+# ru = input()
+#
+# colors.update({en:ru})
+# k = list(colors.keys())
+# k.sort()
+# print(", ".join(k))
