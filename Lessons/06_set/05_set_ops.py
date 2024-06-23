@@ -89,6 +89,21 @@
 # final_games.sort()
 # print("\n".join(final_games))
 
+# # Task
+# pl1 = input()
+# pl2 = input()
+#
+# pl1_file = set(open(pl1).read().splitlines())
+# pl2_file = set(open(pl2).read().splitlines())
+#
+# result = list(pl1_file & pl2_file)
+# result.sort()
+#
+# print("\n".join(result))
+
 # Task
-pl1 = "pl1.txt"
-pl2 = "pl2.txt"
+g1 = "guests-1.txt"
+g2 = "guests-2.txt"
+
+g1_f = open(g1)
+print(g1_f)
