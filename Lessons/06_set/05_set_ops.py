@@ -101,9 +101,51 @@
 #
 # print("\n".join(result))
 
-# Task
-g1 = "guests-1.txt"
-g2 = "guests-2.txt"
+# # Task
+# g1 = input()
+# g2 = input()
+#
+# g1_f = set(open(g1).read().splitlines())
+# g2_f = set(open(g2).read().splitlines())
+#
+# result =  list(g1_f | g2_f)
+# result.sort()
+#
+# print("\n".join(result))
 
-g1_f = open(g1)
-print(g1_f)
+# # Task
+# books_1 = input()
+# books_2 = input()
+#
+# b1_file = open(books_1).read().splitlines()
+# b2_file = open(books_2).read().splitlines()
+#
+# b1_file = set(b1_file)
+# b2_file = set(b2_file)
+#
+# restult = list(b1_file - b2_file | b2_file - b1_file)
+# restult.sort()
+#
+# print("\n".join(restult))
+
+# # Task
+# new_books = {"Мастер и Маргарита", "Отцы и дети", "Ревизор"}
+# cafe = "c1.txt"
+# cafe_file = set(open(cafe).read().splitlines())
+# result = list(new_books - cafe_file)
+# result.sort()
+#
+# print("\n".join(result))
+
+# Task
+FOR_SWIMMING = {"Шапочка", "Очки", "Плавки", "Сланцы", "Мочалка", "Мыло", "Полотенце"}
+import sys
+
+my_stuff = set(sys.stdin.read().splitlines())
+
+if my_stuff == FOR_SWIMMING:
+    print("Вы готовы!")
+else:
+    result = list(FOR_SWIMMING - my_stuff)
+    result.sort()
+    print(", ".join(result))
