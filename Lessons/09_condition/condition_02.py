@@ -55,21 +55,33 @@
 # else:
 #     print("Пароль подходит")
 
-Task
+# # Task
 numb = int(input())
 result = 0
+prefix = ""
 
 if numb >= 1_000_000:
     result = round(numb / 1_000_000, 2)
+    prefix = "M"
+
     if result.is_integer():
         result = int(result)
-    print(f"{result}M")
+    else:
+        result = round(result, 2)
 
 elif numb >= 1000:
-    result = numb / 1000
+    result = round(numb / 1000, 2)
+    prefix = "K"
 
-    if result.is_integer():
-        print(f"{result}K")
+    print(result)
+
+    if len(str(result)) >= 4:
+        result = str(result)[:4]
+    elif len(str(result)) <= 3:
+        result = str(result)[:3]
 
 else:
-    print(f"{numb}")
+    result = str(numb)
+
+
+print(result + prefix)
