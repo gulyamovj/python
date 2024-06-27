@@ -88,6 +88,3 @@ else:
     result = str(numb)
 
 print(str(result) + prefix)
-
-
-# 485134
