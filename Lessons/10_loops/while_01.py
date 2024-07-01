@@ -54,14 +54,14 @@
 #
 # print(factorial)
 
-# Task
-numbers = [1, 7, 8, 34, 56, 14, 9]
-
-total_sum = 0
-
-i = 0
-while i <= (len(numbers) - 1):
-    total_sum = total_sum + numbers[i]
-    i += 1
-
-print(total_sum)
+# # Task
+# numbers = [1, 7, 8, 34, 56, 14, 9]
+#
+# total_sum = 0
+#
+# i = 0
+# while i <= (len(numbers) - 1):
+#     total_sum = total_sum + numbers[i]
+#     i += 1
+#
+# print(total_sum)
