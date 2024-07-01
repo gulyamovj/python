@@ -53,16 +53,10 @@
 # print(" ".join(result).replace(" \n ", "\n").rstrip())
 
 # Task
-num = ["111", "2", "33", "41"]
+num = ["111", "2", "33", "24"]
 
-result = 0
-list = []
-counter = 1
+elements = 0
 
-while counter <= len(num):
-    result = result + int(num[counter - 1])
-    if counter == len(num):
-        list.append(result)
-    counter += 1
-
-print(list)
+while elements <= (len(num) - 1):
+    print(num[elements])
+    elements += 1
