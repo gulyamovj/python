@@ -52,11 +52,24 @@
 #
 # print(" ".join(result).replace(" \n ", "\n").rstrip())
 
-# Task
-num = ["111", "2", "33", "24"]
+# # Task
+# num = ["111", "2", "33", "24"]
+#
+# elements = 0
+#
+# while elements <= (len(num) - 1):
+#     print(num[elements])
+#     elements += 1
 
-elements = 0
+import random
 
-while elements <= (len(num) - 1):
-    print(num[elements])
-    elements += 1
+def get_choices():
+    player_choice = input("Enter a choise (rock, paper, scissors): ")
+    options = ["rock", "paper", "scissors"]
+    computer_choice = random.choice(options)
+    choices = {"player": player_choice, "computer": computer_choice}
+    return choices
+
+def check_win(player, computer):
+    if player == computer:
+        return "It's a tie!"
