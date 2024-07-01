@@ -71,5 +71,6 @@ def get_choices():
     return choices
 
 def check_win(player, computer):
+    print("You choise " + player + ", computer chose " + computer)
     if player == computer:
         return "It's a tie!"
