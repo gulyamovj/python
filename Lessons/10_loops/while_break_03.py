@@ -76,7 +76,7 @@ users = [
     {"id": 287, "first_name": "Виталий", "last_name": "Новиков", "lang": "c++"}
 ]
 
-language = input()
+language = input("Enter the programming lang: ")
 
 i = 0
 while i < len(users):

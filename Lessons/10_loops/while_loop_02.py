@@ -52,29 +52,11 @@
 #
 # print(" ".join(result).replace(" \n ", "\n").rstrip())
 
-# Task
-import sys
-input_numbers = sys.stdin.read().splitlines()
-
-max_sum = -1
-max_number = None
-
-i = 0
-
-while i < len(input_numbers):
-    number = input_numbers[i]
-    current_sum = 0
-
-    j = 0
-
-    while j < len(number):
-        current_sum += int(number[j])
-        j += 1
-
-    if current_sum > max_sum:
-        max_sum = current_sum
-        max_number = number
-
-    i += 1
-
-print(max_number)
+# # Task
+# num = ["111", "2", "33", "24"]
+#
+# elements = 0
+#
+# while elements <= (len(num) - 1):
+#     print(num[elements])
+#     elements +=
