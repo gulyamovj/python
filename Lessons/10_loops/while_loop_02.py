@@ -52,25 +52,29 @@
 #
 # print(" ".join(result).replace(" \n ", "\n").rstrip())
 
-# # Task
-# num = ["111", "2", "33", "24"]
-#
-# elements = 0
-#
-# while elements <= (len(num) - 1):
-#     print(num[elements])
-#     elements += 1
+# Task
+import sys
+input_numbers = sys.stdin.read().splitlines()
 
-import random
+max_sum = -1
+max_number = None
 
-def get_choices():
-    player_choice = input("Enter a choise (rock, paper, scissors): ")
-    options = ["rock", "paper", "scissors"]
-    computer_choice = random.choice(options)
-    choices = {"player": player_choice, "computer": computer_choice}
-    return choices
+i = 0
 
-def check_win(player, computer):
-    print("You choise " + player + ", computer chose " + computer)
-    if player == computer:
-        return "It's a tie!"
+while i < len(input_numbers):
+    number = input_numbers[i]
+    current_sum = 0
+
+    j = 0
+
+    while j < len(number):
+        current_sum += int(number[j])
+        j += 1
+
+    if current_sum > max_sum:
+        max_sum = current_sum
+        max_number = number
+
+    i += 1
+
+print(max_number)
