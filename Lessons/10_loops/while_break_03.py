@@ -84,4 +84,3 @@
 #     if users[i]["lang"] == language:
 #         print(users[i]["first_name"], users[i]["last_name"])
 #         break
-#     i += 1
