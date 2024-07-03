@@ -77,3 +77,8 @@
 
 import sys
 names = sys.stdin.read().splitlines()
+
+i = 1
+for name in names:
+    print(f"{i}. {name}")
+    i += 1
