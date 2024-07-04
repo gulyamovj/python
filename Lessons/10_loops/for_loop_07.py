@@ -184,21 +184,42 @@
 #
 # print(" ".join(result))
 
+# # Task
+#
+# import sys
+# values = sys.stdin.read().splitlines()
+#
+# last_word = values[0]
+# result = []
+#
+# for value in values:
+#     if value != "null":
+#         last_word = value
+#         result.append(last_word)
+#
+#     elif value == "null":
+#         result.append(last_word)
+#
+# print(" ".join(result))
+
 # Task
+products = [
+    {"name": "Гречка", "price": 69},
+    {"name": "Хлеб", "price": 34},
+    {"name": "Молоко", "price": 57},
+    {"name": "Яйца", "price": 78},
+    {"name": "Рис", "price": 88},
+    {"name": "Макароны", "price": 49},
+    {"name": "Сахар", "price": 22},
+    {"name": "Яблоки", "price": 79},
+    {"name": "Картофель", "price": 18},
+    {"name": "Свинина", "price": 120},
+    {"name": "Масло", "price": 66},
+    {"name": "Помидоры", "price": 64}
+]
 
-import sys
-values = sys.stdin.read().splitlines()
-
-result = []
-counter = 0
-
-for i in values:
-
-    result.append(i)
-
-    if result[counter] == "null":
-        result.append(result[counter - 1])
-
-    counter += 1
-
-print(result)
+# amount = int(input())
+res = 0
+for i in products:
+    res = int(i["price"])
+    print(res)
