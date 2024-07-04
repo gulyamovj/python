@@ -73,12 +73,132 @@
 # print(f'Доходы: {income} руб.\n'
 #       f'Расходы: {abs(expenditure)} руб.')
 
+
+# # Task
+# import sys
+# names = sys.stdin.read().splitlines()
+#
+# i = 1
+# for name in names:
+#     print(f"{i}. {name}")
+#     i += 1
+
+# # Task
+#
+# population = [
+#     144_963_650,  # 2003
+#     144_168_205,
+#     143_474_219,
+#     142_753_551,
+#     142_220_968,
+#     142_008_838,
+#     141_903_979,
+#     142_856_536,
+#     142_865_433,
+#     143_056_383,
+#     143_347_059,
+#     143_666_931,
+#     146_267_288,
+#     146_544_710,
+#     146_804_372,
+#     146_880_432,
+#     146_780_720,
+#     146_748_590  # 2020
+# ]
+#
+# # Получаем год
+# year = int(input())
+#
+# # Вычисляем индекс года
+# year_index = year - 2003
+#
+# # Получаем значение
+# year_population = population[year_index]
+#
+# # Список для хранения результатов
+# result = []
+#
+# # Создаем переменную, в которой будем хранить текущий год.
+# current_year = 2003
+#
+# # Перебираем значение в цикле
+# for p in population:
+#     # Если значение очередного года больше или ровно переданному,
+#     # то добавляем результат в список result
+#     if p >= year_population:
+#         result.append(str(current_year))
+#
+#     # Увеличиваем год
+#     current_year += 1
+#
+# # Вывод данных
+# print(", ".join(result))
+#
+#
+#
+# year = int(input())
+#
+# year_index = year - 2003
+# year_population = population[year_index]
+#
+# result = []
+# current_year = 2003
+#
+# for p in population:
+#     if p >= year_population:
+#         result.append(str(current_year))
+#
+#     current_year += 1
+#
+# print(", ".join(result))
+
+# # Task
+# import sys
+# incomes = sys.stdin.read().splitlines()
+#
+# sum = []
+# count = 0
+#
+# for i in incomes:
+#     count += int(i)
+#     sum.append(str(count))
+#
+# print(" ".join(sum))
+
+# # Task
+# import sys
+# num = sys.stdin.read().splitlines()
+# numbers = []
+#
+# for i in num:
+#     numbers.append(int(i))
+#
+# maximum = max(numbers)
+#
+# count = 0
+# result = []
+#
+# for n in numbers:
+#     count = n - maximum
+#     result.append(str(count))
+#
+# print(" ".join(result))
+
 # Task
 
 import sys
-names = sys.stdin.read().splitlines()
+values = sys.stdin.read().splitlines()
 
-i = 1
-for name in names:
-    print(f"{i}. {name}")
-    i += 1
+result = []
+counter = 0
+
+for i in values:
+
+    result.append(i)
+
+    if result[counter] == "null":
+        result.append(result[counter - 1])
+
+    counter += 1
+
+print(result)
