@@ -219,7 +219,36 @@ products = [
 ]
 
 # amount = int(input())
-res = 0
-for i in products:
-    res = int(i["price"])
-    print(res)
+#
+# res = []
+#
+# for i in products:
+#
+#     if amount >= 0:
+#         res.append(amount - i["price"])
+#     elif amount <= 0:
+#         break
+#
+#     amount -= i["price"]
+#
+# i = 0
+# while i <= len(res) - 1:
+#     res[i] = products[i]["name"]
+#     i += 1
+#
+# res = res[:len(res)-1]
+#
+# print(', '.join(res))
+
+amount = int(input())
+
+my_products = []
+
+for product in products:
+    amount = amount - product["price"]
+    if amount >= 0:
+        my_products.append(product["name"])
+    else:
+        break
+
+print(", ".join(my_products))
