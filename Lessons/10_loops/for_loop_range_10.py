@@ -53,20 +53,36 @@ names = ["Ivan", "Nikita", "Ilya", "Viktor", "Alena", "Svetlana"]
 #
 # print(" ".join(result))
 
+# # Task
+# input_data = input()
+# pages = input_data.split(",")
+#
+# result = set()
+#
+# for page in pages:
+#     if "-" in page:
+#         start, end = page.split("-")
+#         for page in range(int(start), int(end) + 1):
+#             result.add(page)
+#     else:
+#         result.add(int(page))
+#
+# sorted_pages = sorted(result)
+#
+# print(",".join(map(str, sorted_pages)))
+
 # Task
-input_data = input()
-pages = input_data.split(",")
 
-result = set()
+n = int(input()) + 1
 
-for page in pages:
-    if "-" in page:
-        start, end = page.split("-")
-        for page in range(int(start), int(end) + 1):
-            result.add(page)
-    else:
-        result.add(int(page))
-
-sorted_pages = sorted(result)
-
-print(",".join(map(str, sorted_pages)))
+for i in range(1, n):
+    if i % 5 == 0 and i % 3 == 0:
+        print("FizzBuzz")
+        continue
+    if i % 5 != 0 and i % 3 != 0:
+        print(i)
+        continue
+    if i % 3 == 0:
+        print("Fizz")
+    if i % 5 == 0:
+        print("Buzz")
