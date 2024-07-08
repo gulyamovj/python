@@ -67,36 +67,36 @@
 #
 # print(", ".join(users_id))
 
-# # Task
-# import sys
-#
-# num = sys.stdin.read().splitlines()
-# numbers = []
-#
-# for n in num:
-#     numbers.append(int(n))
-#
-# max_value = None
-# result = []
-#
-# for number in numbers:
-#     if max_value is None or number > max_value:
-#         max_value = number
-#         result.append(str(max_value))
-#
-# print(", ".join(result))
-
-# Teacher variant
+# Task
 import sys
-values = ['34', '56', '12', '55', '74', '58', '59', '74', '75']
-print(values)
-max_values = []
-max_value = float("-inf")
 
-for value in values:
-    value = int(value)
-    if value > max_value:
-        max_value = value
-        max_values.append(str(max_value))
+num = ['34', '56', '12', '55', '74', '58', '59', '74', '75']
+numbers = []
 
-print(", ".join(max_values))
+for n in num:
+    numbers.append(int(n))
+
+max_value = None
+result = []
+
+for number in numbers:
+    if max_value is None or number > max_value:
+        max_value = number
+        result.append(str(max_value))
+
+print(", ".join(result))
+
+# # Teacher variant
+# import sys
+# values = ['34', '56', '12', '55', '74', '58', '59', '74', '75']
+# print(values)
+# max_values = []
+# max_value = float("-inf")
+#
+# for value in values:
+#     value = int(value)
+#     if value > max_value:
+#         max_value = value
+#         max_values.append(str(max_value))
+#
+# print(", ".join(max_values))
