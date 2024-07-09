@@ -71,18 +71,28 @@ names = ["Ivan", "Nikita", "Ilya", "Viktor", "Alena", "Svetlana"]
 #
 # print(",".join(map(str, sorted_pages)))
 
+# # Task
+#
+# n = int(input()) + 1
+#
+# for i in range(1, n):
+#     if i % 5 == 0 and i % 3 == 0:
+#         print("FizzBuzz")
+#         continue
+#     if i % 5 != 0 and i % 3 != 0:
+#         print(i)
+#         continue
+#     if i % 3 == 0:
+#         print("Fizz")
+#     if i % 5 == 0:
+#         print("Buzz")
+
 # Task
 
-n = int(input()) + 1
+n = int(input())
+pi_over_4 = 0
+for k in range(n):
+    pi_over_4 += (-1)**k / (2*k + 1)
+pi = pi_over_4 * 4
 
-for i in range(1, n):
-    if i % 5 == 0 and i % 3 == 0:
-        print("FizzBuzz")
-        continue
-    if i % 5 != 0 and i % 3 != 0:
-        print(i)
-        continue
-    if i % 3 == 0:
-        print("Fizz")
-    if i % 5 == 0:
-        print("Buzz")
+print(f'{pi:.5f}')
