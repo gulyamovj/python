@@ -1,8 +1,11 @@
 # Task
+file_name = input()
 
-file = "transactions.txt"
+balance_file = open(file_name, "r", encoding="utf-8")
+result = 0
 
-balance_file = open(file, "r")
-balance_read = balance_file.read()
+for line in balance_file.readlines():
+    name, count = line.split(";")
+    result = result + int(count)
 
-print(balance_read)
+print(result)
