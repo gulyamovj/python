@@ -78,5 +78,3 @@ result = ""
 
 for line in file.read().splitlines():
     if word_ru in line.lower():
-        for l in line:
-            print(l)
