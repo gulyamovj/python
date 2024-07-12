@@ -69,12 +69,67 @@
 #
 # print(result)
 
-file_name = "spar.txt"
-file = open(file_name, "r")
+# # Task
+# file_name = "spar.txt"
+# file = open(file_name, "r")
+#
+# word_en = "spar"
+# word_ru = "спар"
+# result = ""
+#
+# for line in file.read().splitlines():
+#     if word_ru in line.lower():
+#         line = line.lower()
+#         result = line.replace(word_ru, word_en.upper())
+#         print(result)
 
-word_en = "spar"
-word_ru = "спар"
-result = ""
+# # Task
+#
+# import sys
+# prefix, quantity, chars = sys.stdin.read().splitlines()
+# quantity = int(quantity)
+# chars = int(chars)
+#
+# file_content = []
+#
+# for count in range(1, quantity + 1):
+#     file = open(f"{prefix}-{count}.txt", "r", encoding="utf-8")
+#     file_content.append(file.read())
+#
+# result = []
+# for i in range(chars):
+#     file_index = i % quantity
+#     char_index = i // quantity
+#
+#     if char_index < len(file_content[file_index]):
+#         result.append(file_content[file_index][char_index])
+#
+# print("".join(result))
 
-for line in file.read().splitlines():
-    if word_ru in line.lower():
+# Lesson
+employees = [
+    [
+        {"name" : "Ivanov I. I.", "busy" : True},
+        {"name" : "Petrov P. P.", "busy" : True},
+        {"name" : "Sidorov S. S.", "busy" : True}
+    ],
+    [
+        {"name": "Sokolov A. A.", "busy": True},
+        {"name": "Utkin B. B.", "busy": False},
+        {"name": "Lebedev A. T.", "busy": False}
+    ],
+    [
+        {"name": "Medvedev D. A.", "busy": False},
+        {"name": "Volkov A. E.", "busy": True},
+        {"name": "Kozlov A. C.", "busy": False}
+    ]
+]
+
+candidate = None
+
+for dep in employees:
+    for emp in dep:
+        if not candidate and not emp["busy"]:
+            candidate = emp["name"]
+
+print(candidate)
