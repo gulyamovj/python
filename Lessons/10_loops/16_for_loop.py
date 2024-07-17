@@ -23,15 +23,30 @@
 #
 # print(" ".join(final))
 
-# Task
+# # Task
+# input_str = input()
+#
+# chars = list(input_str)
+#
+# for i in range(0, len(chars) - 1, 2):
+#     chars[i], chars[i + 1] = chars[i + 1], chars[i]
+#
+# print("".join(chars))
 
-chars = ["A", "B", "C", "D", "E", "F"]
-prev_char = chars[0]
+# Task
+import sys
+input_num = sys.stdin.read().splitlines()
+input_num = list(map(int, input_num))
+
 result = []
 
-for idx, char in enumerate(chars):
-    prev_char = chars[idx-1] if idx > 0 else chars[idx]
+for i, n in enumerate(input_num):
+    prev_n = input_num[i - 1] if i > 0 else 0
+    if n > prev_n:
+        result.append("green")
+    elif n < prev_n:
+        result.append("red")
+    else:
+        result.append(result[i-1] if i > 0 else "green")
 
-    print(idx, char, prev_char)
-
-print(result)
+print(" ".join(result))
