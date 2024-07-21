@@ -33,20 +33,61 @@
 #
 # print("".join(chars))
 
-# Task
-import sys
-input_num = sys.stdin.read().splitlines()
-input_num = list(map(int, input_num))
+# # Task
+# import sys
+# input_num = sys.stdin.read().splitlines()
+# input_num = list(map(int, input_num))
+#
+# result = []
+#
+# for i, n in enumerate(input_num):
+#     prev_n = input_num[i - 1] if i > 0 else 0
+#     if n > prev_n:
+#         result.append("green")
+#     elif n < prev_n:
+#         result.append("red")
+#     else:
+#         result.append(result[i-1] if i > 0 else "green")
+#
+# print(" ".join(result))
 
-result = []
 
-for i, n in enumerate(input_num):
-    prev_n = input_num[i - 1] if i > 0 else 0
-    if n > prev_n:
-        result.append("green")
-    elif n < prev_n:
-        result.append("red")
-    else:
-        result.append(result[i-1] if i > 0 else "green")
+cities_t = [
+    ("Каир", 16_925_000),
+    ("Токио", 38_505_000),
+    ("Дакка", 18_595_000),
+    ("Шанхай", 22_125_000),
+    ("Мехико", 20_395_000),
+    ("Пекин", 19_430_000),
+    ("Мумбаи", 23_645_000),
+    ("Дели", 28_125_000),
+    ("Осака", 19_281_000),
+    ("Сан-Паулу", 20_935_000)
+]
 
-print(" ".join(result))
+cities_d = [
+    {"name": "Каир", "population": 16_925_000},
+    {"name": "Токио", "population": 38_505_000},
+    {"name": "Дакка", "population": 18_595_000},
+    {"name": "Шанхай", "population": 22_125_000},
+    {"name": "Мехико", "population": 20_395_000},
+    {"name": "Пекин", "population": 19_430_000},
+    {"name": "Мумбаи", "population": 23_645_000},
+    {"name": "Дели", "population": 28_125_000},
+    {"name": "Осака", "population": 19_281_000},
+    {"name": "Сан-Паулу", "population": 20_935_000}
+]
+
+employees = [
+    {"name": "Иван Иванов",    "job": {"role": "Программист", "salary": 150_000}},
+    {"name": "Дмитрий Петров", "job": {"role": "Менеджер",    "salary": 120_000}},
+    {"name": "Олег Осипов",    "job": {"role": "Дизайнер",    "salary": 140_000}},
+    {"name": "Ирина Смирнова", "job": {"role": "Программист", "salary": 160_000}},
+    {"name": "Юлия Соколова",  "job": {"role": "Дизайнер",    "salary": 150_000}},
+    {"name": "Семен Сорокин",  "job": {"role": "Архитектор",  "salary": 130_000}}
+]
+
+for employee in sorted(employees, key=lambda e: e["job"]["salary"]):
+    name = employee["name"]
+    salary = employee["job"]["salary"]
+    print(f"{name:<20}{salary:>12,}")
