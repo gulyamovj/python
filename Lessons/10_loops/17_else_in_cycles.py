@@ -157,20 +157,20 @@
 #
 # print(" ".join(map(str, path)))
 
-# # Task
-# n = int(input())
-# current_numb = 1
-# i = 1
-#
-# while current_numb <= n:
-#     row = []
-#     for _ in range(i):
-#         if current_numb > n:
-#             break
-#         row.append(str(current_numb))
-#         current_numb += 1
-#     print(" ".join(row))
-#     i += 1
+# Task
+n = int(input())
+current_numb = 1
+i = 1
+
+while current_numb <= n:
+    row = []
+    for _ in range(i):
+        if current_numb > n:
+            break
+        row.append(str(current_numb))
+        current_numb += 1
+    print(" ".join(row))
+    i += 1
 
 # Task
 
@@ -185,3 +185,4 @@ del custumers_ages[max_value_index]
 custumers_ages.insert(0, max_value)
 
 print(" ".join(map(str, custumers_ages)))
+
