@@ -157,32 +157,115 @@
 #
 # print(" ".join(map(str, path)))
 
+# # Task
+# n = int(input())
+# current_numb = 1
+# i = 1
+#
+# while current_numb <= n:
+#     row = []
+#     for _ in range(i):
+#         if current_numb > n:
+#             break
+#         row.append(str(current_numb))
+#         current_numb += 1
+#     print(" ".join(row))
+#     i += 1
+#
+# # Task
+#
+# custumers_ages = input().split()
+# custumers_ages = list(map(int, custumers_ages))
+#
+# max_value = max(custumers_ages)
+# max_value_index = custumers_ages.index(max_value)
+#
+# del custumers_ages[max_value_index]
+#
+# custumers_ages.insert(0, max_value)
+#
+# print(" ".join(map(str, custumers_ages)))
+
+# revenues = [100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210]
+#
+# prev_revenue = 0
+#
+# for idx, revenue in enumerate(revenues):
+#     next_revenue = revenues[idx+1] if idx < len(revenues) - 1 else 0
+#     prev_revenue = revenues[idx-1] if idx > 0 else 0
+#     print(prev_revenue, revenue, next_revenue)
+
+# # Task
+#
+# nums = [2, 5, 4, 0, 1, 6, 3]
+#
+# path = []
+# visited = set()
+#
+# current_index = nums[0]
+#
+# for _ in range(len(nums)):
+#     if current_index in visited:
+#         break
+#     path.append(current_index)
+#     visited.add(current_index)
+#     current_index = nums[current_index]
+#
+# print(" ".join(map(str, path)))
+
+
+
+# # Task
+#
+# fn = "bank.txt"
+#
+# balances = {}
+#
+# for line in open(fn):
+#     from_account, to_account, amount = line.split(";")
+#     amount = int(amount)
+#
+#     if from_account != '000':
+#         if from_account in balances:
+#             balances[from_account] -= amount
+#         else:
+#             balances[from_account] = -amount
+#
+#     if to_account != '000':
+#         if to_account in balances:
+#             balances[to_account] += amount
+#         else:
+#             balances[to_account] = amount
+#
+#
+# if '000' in balances:
+#     del balances['000']
+#
+# sorted_accounts = sorted(balances.items(), key=lambda x: x[1])
+#
+# result = ";".join(f'{account} {balance}' for account, balance in sorted_accounts)
+#
+# print(result)
+
+
 # Task
-n = int(input())
-current_numb = 1
-i = 1
 
-while current_numb <= n:
-    row = []
-    for _ in range(i):
-        if current_numb > n:
-            break
-        row.append(str(current_numb))
-        current_numb += 1
-    print(" ".join(row))
-    i += 1
+nums = [2, 5, 4, 0, 1, 6, 3]
 
-# Task
+path = []
+current_index = nums[0]
+visited = []
 
-custumers_ages = input().split()
-custumers_ages = list(map(int, custumers_ages))
+for i in nums:
+    path.append(i)
 
-max_value = max(custumers_ages)
-max_value_index = custumers_ages.index(max_value)
+for e in path:
+    visited.append(nums[e])
 
-del custumers_ages[max_value_index]
+print(visited)
 
-custumers_ages.insert(0, max_value)
 
-print(" ".join(map(str, custumers_ages)))
+
+
+
 
