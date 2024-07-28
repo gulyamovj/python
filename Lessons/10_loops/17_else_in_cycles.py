@@ -249,21 +249,24 @@
 
 
 # Task
+import sys
+nums = sys.stdin.read().splitlines()
+nums = list(map(int, nums))
 
-nums = [2, 5, 4, 0, 1, 6, 3]
+current = nums[0]
+values = []
 
-path = []
-current_index = nums[0]
-visited = []
+for i in range(len(nums)):
+    if current in values:
+        values.append(current)
+        break
+    if nums[0] == 0:
+        values.append(current)
+        break
+    values.append(current)
+    current = nums[current]
 
-for i in nums:
-    path.append(i)
-
-for e in path:
-    visited.append(nums[e])
-
-print(visited)
-
+print(" ".join(map(str, values)))
 
 
 
