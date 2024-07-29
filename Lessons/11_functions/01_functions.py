@@ -40,28 +40,45 @@
 #         result += "-"
 #     return result
 
+# # Task
+# def strip(text):
+#     text = text.strip()
+#
+#     message = []
+#
+#     for char in text:
+#         message.append(char)
+#
+#     next_char = ""
+#     prev_char = ""
+#     new_message = []
+#
+#     for idx, sym in enumerate(message):
+#
+#         next_char = message[idx + 1] if idx < len(message) - 1 else sym
+#         prev_char = message[idx - 1] if idx > 0 else sym
+#
+#         if sym == " " and next_char == " ":
+#             del message[idx]
+#         if sym == " " and prev_char == " ":
+#             del message[idx]
+#
+#     message = "".join(message)
+#     return message
+#
+# print(strip("   Hello how   do you    feel?   "))
+
+# # Task
+# def c_to_f(c):
+#     result = (c * (9/5)) + 32
+#     return f'{result:.1f}'
+#
+# print(c_to_f(5))
+
 # Task
-def strip(text):
-    text = text.strip()
+def speed_to_pace(speed):
+    pace_minutes = 60 / speed
+    minutes = int(pace_minutes)
+    seconds = round((pace_minutes - minutes) * 60)
 
-    message = []
-
-    for char in text:
-        message.append(char)
-
-    next_char = ""
-    prev_char = ""
-    new_message = []
-
-    for idx, sym in enumerate(message):
-
-        next_char = message[idx + 1] if idx < len(message) - 1 else sym
-        prev_char = message[idx - 1] if idx > 0 else sym
-
-        if sym == " " and next_char == " ":
-            del message[idx]
-        if sym == " " and prev_char == " ":
-            del message[idx]
-
-    message = "".join(message)
-    return message
+    return f"{minutes}:{seconds:02d}"
