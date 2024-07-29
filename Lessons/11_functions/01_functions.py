@@ -75,10 +75,27 @@
 #
 # print(c_to_f(5))
 
-# Task
-def speed_to_pace(speed):
-    pace_minutes = 60 / speed
-    minutes = int(pace_minutes)
-    seconds = round((pace_minutes - minutes) * 60)
+# # Task
+# def speed_to_pace(speed):
+#     pace_minutes = 60 / speed
+#     minutes = int(pace_minutes)
+#     seconds = round((pace_minutes - minutes) * 60)
+#
+#     return f"{minutes}:{seconds:02d}"
 
-    return f"{minutes}:{seconds:02d}"
+# Task
+card_number = "123456"
+floor = "8"
+
+file = open('db.txt', 'r', encoding='utf-8')
+lines = file.readlines()
+file.close()
+
+for line in lines:
+    card, room = line.strip().split(";")
+    if card == card_number:
+        room_floor = room[0]
+    if floor == room_floor:
+        print("True")
+    else:
+        print("False")
