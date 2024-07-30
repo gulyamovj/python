@@ -49,10 +49,10 @@ def separate(data):
     for i in data:
         if i.isdigit() and key:
             number += str(i)
-        elif i.isalpha():
+        else:
             text += i
             key = False
 
     return int(number), text
 
-print(separate("75, Python"))
+print(separate("Python 3"))
