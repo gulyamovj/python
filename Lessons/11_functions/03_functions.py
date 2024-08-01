@@ -41,6 +41,7 @@
 #
 # print(check_access("123056", "2"))
 
+<<<<<<< Updated upstream
 # Task
 def separate(data):
     number = "0"
@@ -52,7 +53,41 @@ def separate(data):
         else:
             text += i
             key = False
+=======
+# # Task
+# def separate(data):
+#     number = "0"
+#     text = ""
+#     key = True
+#     for i in data:
+#         if i.isdigit() and key:
+#             number += str(i)
+#         elif i.isalpha():
+#             text += i
+#             key = False
+#
+#     return int(number), text
+#
+# print(separate("75, Python"))
+>>>>>>> Stashed changes
 
-    return int(number), text
+text = "{kljhkjsdf}{}[10, 20, [10, 20])"
+brackets = []
 
+<<<<<<< Updated upstream
 print(separate("Python 3"))
+=======
+for char in text:
+    if char == "(":
+        brackets.append(char)
+    elif char == ")":
+        if not brackets:
+            print(0)
+            exit()
+        brackets.pop()
+
+if not brackets:
+    print(1)
+else:
+    print(0)
+>>>>>>> Stashed changes
