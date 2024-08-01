@@ -41,19 +41,6 @@
 #
 # print(check_access("123056", "2"))
 
-<<<<<<< Updated upstream
-# Task
-def separate(data):
-    number = "0"
-    text = ""
-    key = True
-    for i in data:
-        if i.isdigit() and key:
-            number += str(i)
-        else:
-            text += i
-            key = False
-=======
 # # Task
 # def separate(data):
 #     number = "0"
