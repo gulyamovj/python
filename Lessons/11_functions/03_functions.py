@@ -56,25 +56,3 @@
 #     return int(number), text
 #
 # print(separate("75, Python"))
->>>>>>> Stashed changes
-
-text = "{kljhkjsdf}{}[10, 20, [10, 20])"
-brackets = []
-
-<<<<<<< Updated upstream
-print(separate("Python 3"))
-=======
-for char in text:
-    if char == "(":
-        brackets.append(char)
-    elif char == ")":
-        if not brackets:
-            print(0)
-            exit()
-        brackets.pop()
-
-if not brackets:
-    print(1)
-else:
-    print(0)
->>>>>>> Stashed changes
