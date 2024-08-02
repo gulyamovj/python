@@ -23,12 +23,9 @@
 
 # Task
 def pace_to_speed(minutes, seconds=0):
+    total_hours = (minutes * 60 + seconds) / 3600
+    speed_kph = 1 / total_hours
+    speed_rounded = round(speed_kph, 1)
+    return speed_rounded
 
-    minutes = 60 / minutes
-    seconds = str(seconds / 60)
-    seconds = seconds.split(".")
-
-    result = f'{minutes:.0f}.{seconds[1][:1]}'
-    return result
-
-print(pace_to_speed(4))
+print(pace_to_speed(4, 48))
