@@ -28,7 +28,7 @@ def pace_to_speed(minutes, seconds=0):
     seconds = str(seconds / 60)
     seconds = seconds.split(".")
 
-    result = f'{minutes:.0f}.{seconds[1]}'
+    result = f'{minutes:.0f}.{seconds[1][:1]}'
     return result
 
-print(pace_to_speed(4, 14))
+print(pace_to_speed(4))
