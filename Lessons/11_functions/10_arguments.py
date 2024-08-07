@@ -63,14 +63,14 @@
 #
 # print(usm("4", 1, 5, 9))
 
-# Task
-def get_chars(*args):
-
-    text = args[0]
-    result = []
-    for i in args[1:]:
-        result.append(text[i])
-
-    return "".join(result)
-
-print(get_chars("I am Programmer", 0, 2, 4, 6))
+# # Task
+# def get_chars(*args):
+#
+#     text = args[0]
+#     result = []
+#     for i in args[1:]:
+#         result.append(text[i])
+#
+#     return "".join(result)
+#
+# print(get_chars("I am Programmer", 0, 2, 4, 6))

@@ -52,23 +52,24 @@
 # print(calc_distance([3, 0, 5]))
 
 # # Task
-# def resize_disk(size, lst):
-#     sum_of_list = sum(lst)
-#     each_sum = 0
-#     new_lst = []
-#
-#     for i in range(len(lst)):
-#         each_sum = lst[i] / sum_of_list * size
-#         new_lst.append(int(each_sum))
-#
-#     ost = size % sum(new_lst)
-#
-#     if ost > 0:
-#         new_lst[-1] += ost
-#
-#     return new_lst
-#
-# print(resize_disk(150, [15, 15, 20, 10, 40]))
+def resize_disk(size, lst):
+
+    sum_of_list = sum(lst)
+    each_sum = 0
+    new_lst = []
+
+    for i in range(len(lst)):
+        each_sum = lst[i] / sum_of_list * size
+        new_lst.append(int(each_sum))
+
+    ost = size % sum(new_lst)
+
+    if ost > 0:
+        new_lst[-1] += ost
+
+    return new_lst
+
+print(resize_disk(150, [15, 15, 20, 10, 40]))
 
 # # Task
 # def get_dict(arg):
@@ -82,17 +83,16 @@
 #
 # print(get_dict("a:10;b:20;c:30"))
 
-# Task
-def replace_all(text, replacements):
-
-    for key, value in replacements.items():
-        text = text.replace(key, value)
-
-    return text
-
-result = replace_all(
-    "one, two, three, four",
-    {'one': 'один', 'three': 'три', 'five': 'пять', 'two': 'два'}
-)
-
-print(result)
+# # Task
+# def replace_all(text, replacements):
+#
+#     for key, value in replacements.items():
+#         text = text.replace(key, value)
+#
+#     return text
+#
+# result = replace_all(
+#     "one, two, three, four",
+#     {'one': 'один', 'three': 'три', 'five': 'пять', 'two': 'два'}
+# )
+# print(result)
