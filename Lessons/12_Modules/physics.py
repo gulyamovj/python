@@ -6,4 +6,4 @@ def ek(m, v):
 def ep(m, h):
     return m * G * h
 
-print("--- Модуль physics импортирован")
+# print("--- Модуль physics импортирован")
