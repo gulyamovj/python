@@ -2,7 +2,6 @@
 class Auto:
     def __init__(self):
         self._number = []
-
     @property
     def number(self):
         return "".join(self._number).upper()
