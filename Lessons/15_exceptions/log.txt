@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/python/Lessons/15_exceptions/0_example.py", line 13, in <module>
+    y = 100 / x
+        ~~~~^~~
+TypeError: unsupported operand type(s) for /: 'int' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/mac/Documents/python/Lessons/15_exceptions/0_example.py", line 13, in <module>
+    y = 100 / x
+        ~~~~^~~
+TypeError: unsupported operand type(s) for /: 'int' and 'NoneType'
